@@ -63,7 +63,7 @@ public class Board {
 
     public void moveWarriors() {
         for (int i = this.getCells().size(); i > 0; i--) {
-            System.out.println(this.getCells().get(i - 1).getBlueWarriors());
+            LinkedList blueWarriors = this.getCells().get(i - 1).getBlueWarriors();
         }
     }
 
