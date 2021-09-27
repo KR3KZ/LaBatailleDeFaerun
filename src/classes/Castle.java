@@ -42,7 +42,7 @@ public class Castle {
 
     // Methods ---
     // Add a warrior in the waiting line
-    public void addWarrior(Warrior w) {
+    public void addWarriorToWaitingLine(Warrior w) {
         this.warriors.add(w);
     }
 

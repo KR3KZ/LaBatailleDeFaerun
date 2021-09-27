@@ -3,20 +3,16 @@ package classes;
 import classes.warriors.*;
 
 public class Test {
-    public static void main(String[] args) {
-//        ElfVSDwarf();
-//        ElfChiefVSDwarfChief();
-        Castle();
-    }
+//    public static void main(String[] args) {
+////        ElfVSDwarf();
+////        ElfChiefVSDwarfChief();
+//        Castle();
+//    }
 
     public static void Castle() {
         Board board = new Board(5);
-        Castle a = new Castle(Team.BLUE);
-        a.addWarrior(new Elf(a));
-        a.addWarrior(new Dwarf(a));
-        a.addWarrior(new Elf(a));
-        a.addWarrior(new DwarfChief(a));
-        a.trainWarriors();
+        board.addWarriorToCastle(board.getBlueCastle(), new Elf(board.getBlueCastle()));
+        board.moveWarriors();
     }
 
     public static void ElfVSDwarf() {
