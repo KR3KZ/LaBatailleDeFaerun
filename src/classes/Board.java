@@ -50,6 +50,11 @@ public class Board {
         return this.getCell(this.cells.size() - 1);
     }
 
+    // Is the game over ?
+    public boolean isGameOver() {
+        return this.getBlueStartingCell().isRed() || this.getRedStartingCell().isBlue();
+    }
+
     // Return the blue starting cell
     private void generateCells(int length) {
         for (int i = 0; i < length; i++) {
@@ -64,11 +69,11 @@ public class Board {
 
     // Make blue move, then red move
     public void moveWarriors() {
-        // Algo dans le sens de progression des bleus
+        // From left to right
         LinkedList<Warrior> waitingWarriors = null;
         int i = 0;
 
-        // Tant qu'il n'y a pas de guerriers rouge sur le carreau, les bleus avancent
+        // While there is no red warriors, blue moves on...
         while (i < this.getCells().size() && !this.getCell(i).isRed()) {
             Cell currentCell = this.getCell(i);
 
@@ -101,12 +106,14 @@ public class Board {
         }
     }
 
-    public boolean isGameOver() {
-        return this.getBlueStartingCell().isRed() || this.getRedStartingCell().isBlue();
+    public void fight() {
+        for (Cell cells : this.getCells()) {
+
+        }
     }
 
     public void newRound() {
-        this.getBlueCastle().addNewRoundResource();
-        this.getRedCastle().addNewRoundResource();
+        this.getBlueCastle().newRound();
+        this.getRedCastle().newRound();
     }
 }

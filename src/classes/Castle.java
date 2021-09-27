@@ -83,4 +83,8 @@ public class Castle {
         }
         return trainedWarriors;
     }
+
+    public void newRound() {
+        this.addNewRoundResource();
+    }
 }
