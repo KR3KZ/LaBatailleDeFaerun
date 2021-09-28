@@ -107,8 +107,10 @@ public class Board {
     }
 
     public void fight() {
-        for (Cell cells : this.getCells()) {
+        for (Cell cell : this.getCells()) {
+            if (cell.isBlue() && cell.isRed()) {
 
+            }
         }
     }
 

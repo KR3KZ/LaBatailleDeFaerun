@@ -5,19 +5,29 @@ import classes.warriors.Warrior;
 import java.util.LinkedList;
 
 public class Cell {
-    // Constructor ---
+    /**
+     * Cell constructor
+     * @param id
+     */
     public Cell(int id) {
         this.id = id;
     }
 
-    // Constants ---
+    /**
+     * Constants
+     */
     private LinkedList<Warrior> blueWarriors = new LinkedList<>();
     private LinkedList<Warrior> redWarriors = new LinkedList<>();
 
-    // Variables ---
+    /**
+     * Attributes
+     */
     private int id;
 
-    // Getters & setters ---
+    /**
+     * Get id of a cell
+     * @return cell id
+     */
     public int getId() {
         return this.id;
     }
@@ -39,10 +49,18 @@ public class Cell {
         return this.redWarriors;
     }
 
+    /**
+     * Check if cell has a blue warrior
+     * @return true if blue
+     */
     public boolean isBlue() {
         return this.getBlueWarriors().size() > 0;
     }
 
+    /**
+     * Check if cell has a red warrior
+     * @return true if red
+     */
     public boolean isRed() {
         return this.getRedWarriors().size() > 0;
     }

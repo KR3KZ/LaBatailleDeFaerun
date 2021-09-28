@@ -5,26 +5,44 @@ import classes.Team;
 import classes.Utils;
 
 public abstract class Warrior {
-    // Constructor ---
+    /**
+     * Warrior constructor
+     *
+     * @param castle
+     */
     public Warrior(Castle castle) {
         this.setCastle(castle);
     }
 
-    // Constants ---
+    /**
+     * Constants
+     */
     private static final int BASE_STRENGTH = 10;
     private static final int BASE_LIFE = 100;
     private static final int RESOURCE_COST = 1;
 
-    // Variables ---
+    /**
+     * Attributes
+     */
     private int strength = 10;
     private int life = 100;
     private Castle castle;
 
-    // Getters & setters ---
+    /**
+     * Get strength of a warrior
+     *
+     * @return strength
+     */
     public int getStrength() {
         return this.strength;
     }
 
+    /**
+     * Set strength of a warrior
+     *
+     * @param strength
+     * @return strength
+     */
     public int setStrength(int strength) {
         return this.strength = strength;
     }

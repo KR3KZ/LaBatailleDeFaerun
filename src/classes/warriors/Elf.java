@@ -3,7 +3,11 @@ package classes.warriors;
 import classes.Castle;
 
 public class Elf extends Warrior {
-    // Constructor ---
+    /**
+     * Elf constructor
+     *
+     * @param castle
+     */
     public Elf(Castle castle) {
         super(castle);
     }

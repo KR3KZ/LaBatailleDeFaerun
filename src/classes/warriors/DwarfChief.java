@@ -3,7 +3,11 @@ package classes.warriors;
 import classes.Castle;
 
 public class DwarfChief extends Dwarf {
-    // Constructor ---
+    /**
+     * DwarfChief constructor
+     *
+     * @param castle
+     */
     public DwarfChief(Castle castle) {
         super(castle);
     }
